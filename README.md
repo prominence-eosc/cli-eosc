@@ -29,4 +29,4 @@ source ~/.virtualenvs/prominence/bin/activate
 pip install prominence-cli
 ```
 
-See https://prominence-eosc.github.io/docs/ for more information.
+See https://prominence.readthedocs.io for more information.

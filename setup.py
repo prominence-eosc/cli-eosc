@@ -15,7 +15,7 @@ setuptools.setup(
     description="PROMINENCE CLI for managing batch jobs running across clouds",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://prominence-eosc.github.io/docs",
+    url="https://prominence.readthedocs.io",
     platforms=["any"],
     install_requires=["requests", "PyJWT"],
     package_dir={'': '.'},
