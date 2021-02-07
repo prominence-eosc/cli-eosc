@@ -26,6 +26,7 @@ pip install --user virtualenv
 ```
 The PROMINENCE CLI can be installed in a new virtual environment, e.g.
 ```
+mkdir ~/.virtualenvs
 virtualenv ~/.virtualenvs/prominence
 source ~/.virtualenvs/prominence/bin/activate
 pip install prominence-cli
