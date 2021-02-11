@@ -753,16 +753,6 @@ def create_parser():
                                help='Full path to a file on the current host to be \
                                      uploaded and made available to the job. This option \
                                      can be specified multiple times to set multiple output files.')
-    parser_create.add_argument('--output',
-                               dest="outputfile",
-                               action='append',
-                               help='An output file to be copied to transient storage. This option \
-                                     can be specified multiple times to set multiple output files.')
-    parser_create.add_argument('--outputdir',
-                               dest="outputdir",
-                               action='append',
-                               help='A directory to be copied to transient storage. This option \
-                                     can be specified multiple times to set multiple directories.')
     parser_create.add_argument('--workdir',
                                dest='workdir',
                                help='Set the current working directory.')
@@ -787,11 +777,6 @@ def create_parser():
                                type=int,
                                help='Number of retries if the application exit code is not 0. By \
                                      default no retries will be attempted.')
-    parser_create.add_argument('--preemptible',
-                               dest='preemptible',
-                               default=False,
-                               action='store_true',
-                               help='Specify that this job is preemptible')
     parser_create.add_argument('--placement',
                                dest='placement',
                                help='Specify requirements and preferences on where to run the job/workflow')
