@@ -551,14 +551,6 @@ def command_create(args):
     if args.command:
         task['cmd'] = args.command
 
-    # Output files
-    if args.outputfile:
-        job['outputFiles'] = args.outputfile
-
-    # Output directories
-    if args.outputdir:
-        job['outputDirs'] = args.outputdir
-
     # Files to be fetched
     if args.artifact:
         job['artifacts'] = []
@@ -625,11 +617,6 @@ def command_create(args):
         storage = json.loads(storage)
         if 'storage' in storage:
             job['storage'] = storage['storage']
-
-    # Preemptible
-    if args.preemptible:
-        job['policies'] = {}
-        job['policies']['preemptible'] = args.preemptible
 
     # Retries
     if args.retries:
