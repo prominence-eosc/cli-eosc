@@ -164,6 +164,9 @@ def get_token():
     """
     Load saved token
     """
+    if 'PROMINENCE_TOKEN' in os.environ:
+        return os.environ['PROMINENCE_TOKEN']
+
     if os.path.isfile(os.path.expanduser('~/.prominence/token')):
         with open(os.path.expanduser('~/.prominence/token')) as json_data:
             data = json.load(json_data)
