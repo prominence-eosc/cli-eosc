@@ -31,7 +31,7 @@ class ProminenceClient(object):
             if time.time() - auth.get_expiry(token) > 0:
                 raise exceptions.TokenExpiredError('Token has expired')
 
-            self._headers = {"Authorization":"Bearer %s" % token}
+            self._headers = {"Authorization":"token %s" % token}
 
     def authenticate_user(self):
         """
@@ -40,7 +40,7 @@ class ProminenceClient(object):
         token = auth.authenticate_user(create_client_if_needed=True, token_in_file=False)
         if token:
             print('Successfully retrieved token')
-            self._headers = {"Authorization":"Bearer %s" % token}
+            self._headers = {"Authorization":"token %s" % token}
         else:
             raise exceptions.TokenError('Unable to obtain a token')
 
