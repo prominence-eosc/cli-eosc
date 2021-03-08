@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.2.0
+* Report CPU type information for completed jobs
+
 ## 1.1.0
 * Support authentication using tokens to Django rest framework
 * Support reading token from PROMINENCE_TOKEN environment variable
