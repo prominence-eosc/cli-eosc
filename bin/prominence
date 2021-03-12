@@ -818,7 +818,7 @@ def create_parser():
                              nargs='?',
                              choices=['jobs', 'workflows'])
     parser_list.add_argument('id',
-                             help='Workflow id',
+                             help='Workflow id (optional)',
                              nargs='?',
                              type=int)
     parser_list.set_defaults(func=command_list)
