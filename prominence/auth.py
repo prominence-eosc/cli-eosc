@@ -175,7 +175,7 @@ def get_token():
             return data['access_token']
         else:
             raise exceptions.TokenError('The saved token file does not contain access_token')
-    raise exceptions.TokenError('The file ~/.prominence/token does not exist')
+    raise exceptions.TokenError('The file ~/.prominence/token does not exist and the environment variable PROMINENCE_TOKEN also does not exist')
 
 def get_expiry(token):
     """
