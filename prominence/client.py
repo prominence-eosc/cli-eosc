@@ -206,7 +206,7 @@ class ProminenceClient(object):
         except requests.exceptions.RequestException as e:
             raise exceptions.ConnectionError(e)
 
-        if response.status_code == 200:
+        if response.status_code == 200 or response.status_code == 204:
             return True
         elif response.status_code == 401:
             raise exceptions.AuthenticationError()
