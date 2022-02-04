@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.4.0
+* Changed default URL of EOSC PROMINENCE service
+
 ## 1.3.0
 * Support listing jobs associated with a workflow
 
