@@ -8,10 +8,10 @@
 * Support reading token stored as a string in `~./prominence/token`
 * Return an error if permissions of the token file are too open
 
-## 1.4.0
+## 1.4.0
 * Changed default URL of EOSC PROMINENCE service
 
-## 1.3.0
+## 1.3.0
 * Support listing jobs associated with a workflow
 
 ## 1.2.0
