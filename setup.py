@@ -17,7 +17,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://prominence.readthedocs.io",
     platforms=["any"],
-    install_requires=["requests", "PyJWT"],
+    install_requires=["requests", "PyJWT", "pyyaml"],
     package_dir={'': '.'},
     scripts=["bin/prominence"],
     packages=['prominence'],
