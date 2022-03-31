@@ -168,8 +168,18 @@ def get_token():
         return os.environ['PROMINENCE_TOKEN']
 
     if os.path.isfile(os.path.expanduser('~/.prominence/token')):
-        with open(os.path.expanduser('~/.prominence/token')) as json_data:
-            data = json.load(json_data)
+        # Check permissions
+        if oct(os.stat(os.path.expanduser('~/.prominence/token')).st_mode)[-2:] != '00':
+            raise exceptions.TokenError('The permissions of the token file are too open. Please run "chmod 600 ~/.prominence/token"')
+
+        try:
+            # token file is JSON
+            with open(os.path.expanduser('~/.prominence/token')) as fh:
+                data = json.load(fh)
+        except:
+            # token file is not JSON
+            with open(os.path.expanduser('~/.prominence/token')) as fh:
+                return fh.read()
 
         if 'access_token' in data:
             return data['access_token']
