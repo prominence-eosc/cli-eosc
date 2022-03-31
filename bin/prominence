@@ -977,7 +977,7 @@ if __name__ == "__main__":
 
     # Check that the URL for the PROMINENCE service exists; if not, define a default
     if 'PROMINENCE_URL' not in os.environ:
-        os.environ['PROMINENCE_URL'] = 'https://eosc.prominence.cloud/prominence/v1'
+        os.environ['PROMINENCE_URL'] = 'https://eosc.prominence.cloud/api/v1'
 
     # Parse the arguments
     args = parser.parse_args()
