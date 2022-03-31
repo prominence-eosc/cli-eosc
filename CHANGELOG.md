@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.5.1
+* pyyaml dependency was missing
+
 ## 1.5.0
 * Accept job and workflow descriptions in YAML format. These are converted to JSON before being POSTed to the REST API. YAML format makes it simpler to specify commands without having to worry about escaping characters.
 * If input files in job descriptions are in the form of a list of names beginning with `file://`, the specified files will be read and the content automatically added to the job description. This results in much simpler and clearer job description files.
